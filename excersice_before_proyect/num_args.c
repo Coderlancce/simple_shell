@@ -4,6 +4,7 @@
 * main - prints all arguments
 * @ac: count of given arguments
 * @av: arguments values
+*
 * Return: Always 0 (success)
 */
 int main (int ac, char *av[])
