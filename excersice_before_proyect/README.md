@@ -1,4 +1,4 @@
-# some exersice before shell project
+# Some exersice before shell project
 
 ### PID & PPID 
 
