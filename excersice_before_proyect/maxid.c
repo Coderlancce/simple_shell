@@ -5,7 +5,9 @@
 #include <fcntl.h>
 
 /**
+ * main - print the max ids possible use
  *
+ * Return: 0 if success procces, -1 on failure
  */
 
 int main(int argc, char *argv[])
