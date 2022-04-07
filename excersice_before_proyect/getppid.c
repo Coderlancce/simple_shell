@@ -3,7 +3,10 @@
 #include <stdio.h>
 
 /**
+ * main - print id of the current process, 
+ * and id of the father of current procces
  *
+ * Return: none
  */
 
 int main(void)
