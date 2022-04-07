@@ -6,5 +6,6 @@
 | ------------- | ------------- |
 | getppid.c | gcc -Wall -Werror -pedantic getppid.c -o mypid && ./mypid |
 | maxid.c | gcc -Wall -Werror -pedantic maxid.c -o maxid && ./maxid pid_max |
-| num_args.c | gcc -Wall -Werror -pedantic num_args.c -o num_args && ./ num_args "<any argument>" |
- 
+| print_args.c | gcc -Wall -Werror -pedantic print_args.c -o print_args && ./print_args "<any argument>" |
+| wait_instructrion.c | gcc -Wall -Werror -pedantic wait_instruction.c -o listen && ./listen |
+
