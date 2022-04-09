@@ -45,7 +45,7 @@ char *_strmdf(char *s, char *buffer)
 char *_strtok (char *str, char *character)
 {
 	char *buffer = NULL, *agd = NULL;
-	int i = 0, j = 0; lenght = 0;
+	int i = 0, j = 0, lenght = 0;
 	
 	if (str)
 	{
@@ -66,7 +66,10 @@ char *_strtok (char *str, char *character)
 				buffer[i] = '\0';
 		}
 		
-		for (
+		for (; buffer[j]; j++)
+		{
+			
+		}
 
 		return (buffer[i]);
 	
