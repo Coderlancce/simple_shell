@@ -9,3 +9,4 @@
 | 3 | print_args.c | gcc -Wall -Werror -pedantic print_args.c -o print_args && ./print_args "any argument"|
 | 4 | wait_instructrion.c | gcc -Wall -Werror -pedantic wait_instruction.c -o listen && ./listen |
 | 5 | fork_wait_execve.c | gcc -Wall -Werror -pedantic fork_wait_execve.c -o fwe && ./fwe |
+| 6 | s_s_shell.c | gcc -Wall -Werror -pedantic s_s_shell.c -o shell && ./shell | 

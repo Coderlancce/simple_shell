@@ -15,6 +15,6 @@ int main(void)
 
 	my_pid = getpid();
 	father_pid = getppid();
-	printf("%u\n %u\n", my_pid, father_pid);
+	printf("%u\n%u\n", my_pid, father_pid);
 	return (0);
 }

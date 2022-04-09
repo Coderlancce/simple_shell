@@ -9,30 +9,47 @@
 #define FAIL -1
 #define SUCCESS 0
 
+int function_fork(char *command)
+{
+	char *args[] = {command, NULL};
+	int i = 0, pid = 0;
+	
+	while (i < 1)
+	{
+		pid = fork();
+		if (pid != 0)
+			i = 1;
+		wait(NULL);
+		i++;
+	}
+
+	if (pid == 0)
+		execve(args[0], args, NULL);
+	return (0);
+}
+
+
 int main(void)
 {
-	int i = 0, check = 0;
-	char *command = NULL, *buffer[1];
-	size_t size = 32;
+	char *command = NULL;
+	size_t size = 1024, aux = 1;
+	int check = 0, i = 0;
 
-	while (i < 6)
+	for (; i < 5;) 
 	{
 		printf("#cisfun$ ");
-		command = malloc(sizeof(char) * size);
+		command = malloc(sizeof(char) * size);	
 		if (command == NULL)
-			return (FAIL);
-		check = getline(&command, &size, stdin);
+				return (FAIL);
+		check = getline(&command, &aux, stdin);
 		if (check == -1)
 		{
 			free(command);
 			return (FAIL);
-		} 
-		buffer[0] = command;
-		buffer[1] = NULL;
+		}
+		command[check - 1] = '\0';
 
-		execve("bin/ls", buffer, NULL);
-
-		i++;
+		function_fork(command);
 	}
 
 	free(command);
