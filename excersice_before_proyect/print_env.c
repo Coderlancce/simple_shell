@@ -3,24 +3,33 @@
 /**
 *
 */
+
 int main(int ac, char **av, char **env)
 {
-	unsigned int i = 0;
-	char *buffer[4];
+	unsigned int i = 0, j = 0;
+	char *buffer;
 
-	buffer[0] = 'P';
-	buffer[1] = 'A';
-	buffer[2] = 'T';
-	buffer[3] = 'H';
-	buffer[4] = "\n";
-
-	while (env[i] == buffer[0])
+	buffer = malloc(sizeof(char) * 1024);
+	if(buffer == NULL)
+		return (-1);
+	for (i = 0; env[i] != NULL; i++)
 	{
-		/* j = i;
-		for (; env[j] != ; j++)
-			printf("%s", env[j]);*/
-		i++;
-		printf("%s\n", env[i]);
+		if(env[i][0] == 'P' && env[i][1] == 'A')
+		{
+			for(j = 0; env[i][j] != 0; j++)
+				buffer[j] = env[i][j];
+		}
 	}
+
+	divide_str = strtok(buffer, ':');
+	if(divide_str == NULL)
+		return (-1);
+
+	while (divide_str != NULL)
+	{
+		printf("%s\n", divide_str);
+		divide_str = _strtok(NULL, ":");
+	}
+	free(buffer);
 	return (0);
 }
