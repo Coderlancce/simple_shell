@@ -39,10 +39,11 @@ char *_strmdf(char *s, char *buffer)
 }
 
 /**
+* if you want to make strtok, this could be useful
 * _strtok 
 */
 
-char *_strtok (char *str, char *character)
+/* char *_strtok (char *str, char *character)
 {
 	char *buffer = NULL, *agd = NULL;
 	int i = 0, j = 0, lenght = 0;
@@ -79,7 +80,8 @@ char *_strtok (char *str, char *character)
 	{
 		
 	{
-} 
+}
+*/ 
 
 /**
 * main - splits a string and retunr an array
@@ -89,7 +91,7 @@ char *_strtok (char *str, char *character)
 * Return: string splitted by spaces
 */
 
-int main (int ac, char *av[])
+int main(int ac, char *av[])
 {
 	char *buffer = NULL, *assigned = NULL, *divide_str = NULL;	
 	int lenght = 0;
@@ -105,7 +107,7 @@ int main (int ac, char *av[])
 		free(buffer);
 		return (ERROR);
 	}
-	divide_str = _strtok(buffer, " ");
+	divide_str = strtok(buffer, " ");
 	if (divide_str == NULL)
 	{
 		free(buffer);
@@ -115,7 +117,7 @@ int main (int ac, char *av[])
 	while (divide_str != NULL)
 	{
 		printf("%s\n", divide_str);
-		divide_str = _strtok(NULL, " ");
+		divide_str = strtok(NULL, " ");
 	}
 
 	free(buffer);
