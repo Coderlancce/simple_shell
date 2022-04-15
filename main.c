@@ -8,9 +8,12 @@
 int main(void)
 {
 	char *print_stat = NULL;
+	int i = 0;
 
 	print_stat = fun_print();
-	printf("%s$", print_stat);
-
-	return (0);
+	for(; i < 10; i++)
+	{
+		printf("%s$ ", print_stat);
+		wait_command();
+	}
 }

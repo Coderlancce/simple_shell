@@ -22,7 +22,7 @@ char *fun_print()
 	check = getline(&username, &aux, stdin);
 	if(check == -1)
 	{
-		printf("error");
+		free(username);
 		return (NULL);
 	}
 	username[check - 1] = '\0';
