@@ -16,4 +16,6 @@ int main(void)
 		printf("%s$ ", print_stat);
 		wait_command();
 	}
+
+	return (0);
 }

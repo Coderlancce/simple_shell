@@ -6,7 +6,7 @@
  * Return: username, on frailure NULL
  */
 
-char *fun_print()
+char *fun_print(void)
 {
 	char *username = NULL;
 	int size = 10, check = 0;
