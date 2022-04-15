@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void start_shell (char *username);
-char *create_buffer(char *buffer, size_t size);
+int wait_command(void);
+char *fun_print(void);
 
-#endef /*MAIN_H*/
+
+#endif /*MAIN_H*/
