@@ -10,6 +10,7 @@ int main(void)
 	char *print_stat = NULL, *check_path = NULL;
 	int i = 0;
 
+	signal(SIGINT, sighandler);
 	print_stat = fun_print();
 
 	for(; i < 10; i++)
