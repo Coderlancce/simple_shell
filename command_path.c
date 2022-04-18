@@ -8,7 +8,7 @@
 * Return: 0 on Success
 */
 
-int command_path(char *check_path, char *command_buffer)
+int command_path(char *check_path, char *command_buffer, char *command_buffer_save)
 {
 	char *buffer_folder = NULL,  *check_equals = NULL;
 	struct stat sb;
@@ -28,7 +28,7 @@ int command_path(char *check_path, char *command_buffer)
 		}
 		if (stat(check_equals, &sb) == 0)
 		{
-			run_command(check_equals);
+			run_command(check_equals, command_buffer_save);
 			break;
 		}
 		buffer_folder = strtok(NULL, ":");
