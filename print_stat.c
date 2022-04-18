@@ -20,7 +20,7 @@ char *fun_print(void)
 	}
 	printf("Type your username: ");
 	check = getline(&username, &aux, stdin);
-	if(check == -1)
+	if (check == -1)
 	{
 		free(username);
 		return (NULL);

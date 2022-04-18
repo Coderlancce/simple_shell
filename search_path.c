@@ -1,7 +1,5 @@
 #include "main.h"
 
-extern char **environ;
-
 /**
 * search_path - save in a buffer all path
 *
@@ -16,7 +14,7 @@ char *search_path(void)
 
 	buffer_path = malloc(sizeof(char) * 1024);
 	if (buffer_path == NULL)
-		return(NULL);
+		return (NULL);
 
 	for (; environ[i]; i++)
 	{
@@ -26,7 +24,7 @@ char *search_path(void)
 				buffer_path[j] = environ[i][j];
 			break;
 		}
-	}	
+	}
 
 	return (buffer_path);
 }
