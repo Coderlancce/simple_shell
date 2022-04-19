@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
-* search_path - save in a buffer all path
-*
-* Return: the buffer with the path
-*/
+ * search_path - extract the path of env
+ *
+ * Return: pointer path
+ */
 
 char *search_path(void)
 {
 	int i = 0, j = 0;
 	char *buffer_path = NULL;
-
 
 	buffer_path = malloc(sizeof(char) * 1024);
 	if (buffer_path == NULL)
