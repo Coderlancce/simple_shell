@@ -9,6 +9,6 @@
 
 void sighandler(int signum)
 {
-  (void) signum;
-  write(STDOUT_FILENO, "\n:) ", 4);
+	(void) signum;
+	write(STDOUT_FILENO, "\n:) ", 4);
 }
