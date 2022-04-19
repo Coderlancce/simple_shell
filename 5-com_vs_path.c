@@ -1,8 +1,11 @@
 #include "main.h"
 
 /**
+ * com_vs_path - add command to the path
+ * @buffer_fold: buffer of divided path
+ * @command_buffer: buffer to save the user command
  *
- *
+ * Return: 
  */
 
 char *com_vs_path(char *buffer_folder, char *command_buffer)
@@ -12,7 +15,11 @@ char *com_vs_path(char *buffer_folder, char *command_buffer)
 
 	buffer_complete_path = malloc(sizeof(char) * 1024);
 	if (buffer_complete_path == NULL)
+	{
+		free(buffer_folder);
+		free(command_buffer);
 		return (NULL);
+	}
 
 	for (i = 0; buffer_folder[i]; i++)
 		buffer_complete_path[i] = buffer_folder[i];

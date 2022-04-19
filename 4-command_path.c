@@ -1,11 +1,15 @@
 #include "main.h"
 
 /**
+ * command_path - looks for the command in the path
+ * @command_ex: command in the path
+ * @command_buffer: command of the user
+ * @check_path: complete path
  *
- *
+ * Return: 0 on Success
  */
 
-int command_path(char * command_ex, char *command_buffer, char *check_path)
+int command_path(char *command_ex, char *command_buffer, char *check_path)
 {
 	char *buffer_folder = NULL,  *check_equals = NULL;
 	struct stat sb;

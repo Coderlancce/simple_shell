@@ -2,7 +2,7 @@
 
 /**
  * extract_command - search the command in the input
- * @command_buffer: input complet
+ * @command_buffer: input complete
  *
  * Return: pointer char, NULL in frailure
  */
@@ -10,7 +10,7 @@
 char *extract_command(char *command_buffer)
 {
 	char *command_ex = NULL;
-	int i;
+	int i = 0;
 
 	command_ex = malloc(sizeof(char) * 10);
 	if(command_ex == NULL)
