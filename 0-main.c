@@ -12,12 +12,12 @@ int main(void)
 	int i = 0, j = 0;
 
 	signal(SIGINT, sighandler);
-	print_stat = find_username();
+	/*print_stat = find_username();*/
 
 	for (; i == 0; i += j)
 	{
 		check_path = search_path();
-		printf("%s$ ", print_stat);
+		printf("$ ");
 		j = wait_command(check_path);
 	}
 
