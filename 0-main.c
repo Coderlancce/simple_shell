@@ -17,7 +17,7 @@ int main(void)
 	for (; i == 0; i += j)
 	{
 		check_path = search_path();
-		printf("$ ");
+		/*printf("$ ");*/
 		j = wait_command(check_path);
 	}
 
