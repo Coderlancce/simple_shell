@@ -11,9 +11,10 @@
 int run_command(char *command_ex, char *command_buffer)
 {
 	char **args;
-	int i;
+	int i = 0, pid = 0;
 	char *auxline = NULL;
-
+	
+	
 	auxline = malloc(sizeof(char) * 10);
 	if(auxline == NULL)
 	{
@@ -60,6 +61,5 @@ int run_command(char *command_ex, char *command_buffer)
 	free(auxline);
 	free(args);
 	free(*args);
-	free(**args);
 	return (0);
 }

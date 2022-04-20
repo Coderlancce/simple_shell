@@ -12,7 +12,7 @@ int main(void)
 	int i = 0, j = 0;
 
 	signal(SIGINT, sighandler);
-	print_stat = fun_print();
+	print_stat = find_username();
 
 	for (; i == 0; i += j)
 	{

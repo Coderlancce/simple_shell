@@ -8,10 +8,12 @@
 
 char *search_path(void)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, len = 0;
 	char *buffer_path = NULL;
 
-	buffer_path = malloc(sizeof(char) * 1024);
+	len = len_path();
+
+	buffer_path = malloc(sizeof(char) * len);
 	if (buffer_path == NULL)
 		return (NULL);
 

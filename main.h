@@ -13,6 +13,7 @@
 
 extern char **environ;
 
+char *find_username(void);
 void sighandler(int signum);
 char *search_path(void);
 int wait_command(char *check_path);

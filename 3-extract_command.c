@@ -10,9 +10,10 @@
 char *extract_command(char *command_buffer)
 {
 	char *command_ex = NULL;
-	int i = 0;
+	int i = 0, len = 0;
 
-	command_ex = malloc(sizeof(char) * 10);
+	len = len_command(command_buffer);
+	command_ex = malloc(sizeof(char) * len);
 	if(command_ex == NULL)
 	{
 		free(command_buffer);
