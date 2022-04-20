@@ -13,7 +13,6 @@ int command_path(char *command_ex, char *command_buffer, char *check_path)
 {
 	char *buffer_folder = NULL,  *check_equals = NULL;
 	struct stat sb;
-	int len = 0;
 
 	buffer_folder = malloc(sizeof(char) * 1024);
 	if (buffer_folder == NULL)

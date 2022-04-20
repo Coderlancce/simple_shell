@@ -22,5 +22,9 @@ int command_path(char * command_ex, char *command_buffer, char *check_path);
 char *com_vs_path(char *buffer_folder, char *command_buffer);
 int run_command(char *command_ex, char *command_buffer);
 void sighandler(int signum);
+int len_path(void);
+int extract_len(char *s);
+char *_strdup(char *buffer, int len);
+int len_command(char *s);
 
 #endif /*MAIN_H*/
