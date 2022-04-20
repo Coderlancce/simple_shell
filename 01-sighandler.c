@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * sighandler - function for exit 
+ * sighandler - function for exit
  * @signum: void imput
  *
  * Return: none

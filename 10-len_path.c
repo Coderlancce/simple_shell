@@ -19,5 +19,5 @@ int len_path(void)
 				j++;
 		}
 	}
-	return(j);
+	return (j);
 }

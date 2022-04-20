@@ -13,6 +13,6 @@ int len_command(char *s)
 
 	while (s[i] != ' ')
 		i++;
-	
-	return(i);
+
+	return (i);
 }

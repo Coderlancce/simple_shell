@@ -22,8 +22,7 @@ int command_path(char *command_ex, char *command_buffer, char *check_path)
 		free(check_path);
 		return (EOF);
 	}
-
-	if(stat(command_ex, &sb) == 0)
+	if (stat(command_ex, &sb) == 0)
 	{
 		run_command(command_ex, command_buffer);
 	}

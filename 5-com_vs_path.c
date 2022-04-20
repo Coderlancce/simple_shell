@@ -5,7 +5,7 @@
  * @buffer_fold: buffer of divided path
  * @command_buffer: buffer to save the user command
  *
- * Return: 
+ * Return: path with command
  */
 
 char *com_vs_path(char *buffer_folder, char *command_buffer)

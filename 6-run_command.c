@@ -13,36 +13,35 @@ int run_command(char *command_ex, char *command_buffer)
 	char **args;
 	int i = 0, pid = 0;
 	char *auxline = NULL;
-	
-	
+
 	auxline = malloc(sizeof(char) * 10);
-	if(auxline == NULL)
+	if (auxline == NULL)
 	{
 		free(command_ex);
 		free(command_buffer);
-		return(EOF);
+		return (EOF);
 	}
 
 	args = (char **)malloc(sizeof(char *) * 10);
-	if(args == NULL)
+	if (args == NULL)
 	{
 		free(auxline);
 		free(command_ex);
 		free(command_buffer);
-		return(EOF);
+		return (EOF);
 	}
 
 	auxline = strtok(command_buffer, " ");
-	for(i = 0; auxline; i++)
+	for (i = 0; auxline; i++)
 	{
 		args[i] = (char *)malloc(sizeof(char) * 10);
-		if(args[i] == NULL)
+		if (args[i] == NULL)
 		{
 			free(auxline);
 			free(command_ex);
 			free(command_buffer);
 			free(args);
-			return(EOF);
+			return (EOF);
 		}
 		args[i] = auxline;
 		auxline = strtok(NULL, " ");
@@ -55,7 +54,7 @@ int run_command(char *command_ex, char *command_buffer)
 
 	if (pid == 0)
 	execve(args[0], args, NULL);
-	
+
 	free(command_ex);
 	free(command_buffer);
 	free(auxline);
