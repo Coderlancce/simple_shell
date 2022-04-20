@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char *print_stat = NULL, *check_path = NULL;
+	char /**print_stat = NULL,*/ *check_path = NULL;
 	int i = 0, j = 0;
 
 	signal(SIGINT, sighandler);
