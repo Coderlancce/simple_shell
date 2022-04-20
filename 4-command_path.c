@@ -21,33 +21,37 @@ int command_path(char *command_ex, char *command_buffer, char *check_path)
 		free(check_path);
 		return (EOF);
 	}
-	if (stat(command_ex, &sb) == 0)
+
+	if(stat(command_ex, &sb) == 0)
 	{
 		run_command(command_ex, command_buffer);
 	}
 
-	buffer_folder = strtok(check_path, ":");
-	while (buffer_folder != NULL)
+	else
 	{
-		check_equals = com_vs_path(buffer_folder, command_ex);
-		if (check_equals == NULL)
+		buffer_folder = strtok(check_path, ":");
+		while (buffer_folder != NULL)
 		{
-			free(check_path);
-			free(command_ex);
-			free(buffer_folder);
-			return (EOF);
+			check_equals = com_vs_path(buffer_folder, command_ex);
+			if (check_equals == NULL)
+			{
+				free(check_path);
+				free(command_ex);
+				free(buffer_folder);
+				return (EOF);
+			}
+			if (stat(check_equals, &sb) == 0)
+			{
+				run_command(check_equals, command_buffer);
+			}
+			buffer_folder = strtok(NULL, ":");
 		}
-		if (stat(check_equals, &sb) == 0)
-		{
-			run_command(check_equals, command_buffer);
-		}
-		buffer_folder = strtok(NULL, ":");
+
+		if (stat(check_equals, &sb) != 0)
+			printf("Command '%s' not found\n", command_buffer);
+
+		free(check_equals);
 	}
-
-	if (stat(check_equals, &sb) != 0)
-		printf("Command '%s' not found\n", command_buffer);
-
 	free(buffer_folder);
-	free(check_equals);
 	return (0);
 }

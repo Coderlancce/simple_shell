@@ -14,7 +14,9 @@ int run_command(char *command_ex, char *command_buffer)
 	int i = 0, pid = 0;
 	char *auxline = NULL;
 
-	auxline = malloc(sizeof(char) * 10);
+	printf("%s command exe\n", command_ex);
+	printf("%s command buffer\n", command_buffer);
+	auxline = malloc(sizeof(char) * 100);
 	if (auxline == NULL)
 	{
 		free(command_ex);
@@ -22,7 +24,7 @@ int run_command(char *command_ex, char *command_buffer)
 		return (EOF);
 	}
 
-	args = (char **)malloc(sizeof(char *) * 10);
+	args = malloc(sizeof(char *) * 10);
 	if (args == NULL)
 	{
 		free(auxline);
@@ -34,27 +36,19 @@ int run_command(char *command_ex, char *command_buffer)
 	auxline = strtok(command_buffer, " ");
 	for (i = 0; auxline; i++)
 	{
-		args[i] = (char *)malloc(sizeof(char) * 10);
-		if (args[i] == NULL)
-		{
-			free(auxline);
-			free(command_ex);
-			free(command_buffer);
-			free(args);
-			return (EOF);
-		}
 		args[i] = auxline;
 		auxline = strtok(NULL, " ");
 		printf("%s", args[i]);
 	}
+	printf("%s\n args", args[i]);
 
 	pid = fork();
 	if (pid > 0)
-	wait(NULL);
+		wait(NULL);
 
 	if (pid == 0)
-	execve(args[0], args, NULL);
-
+		execve(args[0], args, NULL);
+	
 	free(command_ex);
 	free(command_buffer);
 	free(auxline);

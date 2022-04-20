@@ -8,16 +8,15 @@
 
 int main(void)
 {
-	char /**print_stat = NULL,*/ *check_path = NULL;
+	char *check_path = NULL;
 	int i = 0, j = 0;
 
 	signal(SIGINT, sighandler);
-	/*print_stat = find_username();*/
 
 	for (; i == 0; i += j)
 	{
 		check_path = search_path();
-		/*printf("$ ");*/
+		printf("$ ");
 		j = wait_command(check_path);
 	}
 

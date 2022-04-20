@@ -5,7 +5,7 @@
  * @buffer_fold: buffer of divided path
  * @command_buffer: buffer to save the user command
  *
- * Return: path with command
+ * Return: 
  */
 
 char *com_vs_path(char *buffer_folder, char *command_buffer)
@@ -30,8 +30,8 @@ char *com_vs_path(char *buffer_folder, char *command_buffer)
 		{
 			buffer_complete_path[i] = '/';
 			i++;
-	}
-	buffer_complete_path[i] = command_buffer[j];
+		}
+		buffer_complete_path[i] = command_buffer[j];
 	}
 	return (buffer_complete_path);
 }

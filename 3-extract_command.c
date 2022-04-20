@@ -10,21 +10,17 @@
 char *extract_command(char *command_buffer)
 {
 	char *command_ex = NULL;
-	int i = 0, len = 0;
+	int i = 0;
 
-	len = len_command(command_buffer);
-	command_ex = malloc(sizeof(char) * len);
-	if (command_ex == NULL)
-	{
-		free(command_buffer);
-		return (NULL);
-	}
+	command_ex = malloc(sizeof(char) * 1000);
+	if(command_ex == NULL)
+		return(NULL);
 
-	for (i = 0; command_buffer[i] != '\0'; i++)
+	for(i = 0; command_buffer[i] != '\0'; i++)
 	{
-		if (command_buffer[i] == ' ')
+		if(command_buffer[i] == ' ')
 			break;
 		command_ex[i] = command_buffer[i];
 	}
-	return (command_ex);
+	return(command_ex);
 }
