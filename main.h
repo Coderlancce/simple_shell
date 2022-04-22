@@ -34,5 +34,6 @@ int len_path(void);
 int extract_len(char *s);
 char *_strdup(char *buffer, int len);
 int len_command(char *s);
+int cheker_exit(char *command_buffer);
 
 #endif /*MAIN_H*/

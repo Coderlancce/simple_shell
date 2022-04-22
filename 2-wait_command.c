@@ -11,7 +11,7 @@ int wait_command(char *check_path)
 {
 	char *command_buffer = NULL, *command_ex = NULL;
 	size_t aux = 1;
-	int check = 0, size = 1000;
+	int check = 0, status_exit = 0, size = 1000;
 
 	command_buffer = _calloc(sizeof(char), size);
 	if (command_buffer == NULL)
@@ -22,6 +22,13 @@ int wait_command(char *check_path)
 
 	check = getline(&command_buffer, &aux, stdin);
 	if (check == -1)
+	{
+		free(check_path);
+		free(command_buffer);
+		return (EOF);
+	}
+	status_exit = cheker_exit(command_buffer);
+	if (status_exit == EOF)
 	{
 		free(check_path);
 		free(command_buffer);
