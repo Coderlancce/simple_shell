@@ -5,7 +5,7 @@ A simple shell is a program that interprets human commands and makes **system ca
 
 ## Flowchart 🌊🌊 
 
-[![Diagrama-en-blanco.png](https://i.postimg.cc/Prp5whDN/Diagrama-en-blanco.png)](https://postimg.cc/0bvsTTcq)
+[![flowchat-shell-1.png](https://i.postimg.cc/28X3PFqt/flowchat-shell-1.png)](https://postimg.cc/jLPsff46)
 
 ## Pre-requisites
 All proyect was made in `Ubuntu 20.03.4 LTS`
