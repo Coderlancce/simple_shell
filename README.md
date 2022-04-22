@@ -10,7 +10,7 @@ A simple shell is a program that interprets human commands and makes **system ca
 ## Pre-requisites
 All proyect was made in `Ubuntu 20.03.4 LTS`
 
-## Usage ✨
+## Usage ☀️
 compiler:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -63,9 +63,10 @@ $ ^d
 $| 
 ```
 -------
-#### Authors: ✨✨
+## Authors: ✨✨
 - Leonardo Cumaco -> https://github.com/Coderlancce
 - Jesus Junco -> https://github.com/bcondict
 -------
 All the project was made for Holberton School academy.
+
 [![holberton-imagen.png](https://i.postimg.cc/XNPcj3FQ/holberton-imagen.png)](https://postimg.cc/NL1rD3dH)  
