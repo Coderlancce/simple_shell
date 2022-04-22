@@ -3,14 +3,14 @@
 ## Description 📁
 A simple shell is a program that interprets human commands and makes **system calls** to execute all desired actions. In general, connects the user with Kernel or System, it is the direct relation with the same.
 
-## Flowchart 
+## Flowchart 🌊🌊 
 
 [![Diagrama-en-blanco.png](https://i.postimg.cc/Prp5whDN/Diagrama-en-blanco.png)](https://postimg.cc/0bvsTTcq)
 
 ## Pre-requisites
 All proyect was made in `Ubuntu 20.03.4 LTS`
 
-## Usage
+## Usage ✨
 compiler:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -18,7 +18,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 It will compile all .c files and output hsh executable file.
 
 After complie to execute it use `./hsh` code. 
-## Example
+## Example 🔥
 #### ls command
 
 **interactive mode** 
@@ -63,7 +63,7 @@ $ ^d
 $| 
 ```
 -------
-Authors:
+#### Authors: ✨✨
 - Leonardo Cumaco -> https://github.com/Coderlancce
 - Jesus Junco -> https://github.com/bcondict
 -------
