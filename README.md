@@ -28,8 +28,8 @@ $ ls
 0-main.c         100-calloc.c      3-extract_command.c  6-run_command.c           main.h
 01-sighandler.c  101-strlen.c      4-command_path.c     README.md                 man_simple_shell
 1-search_path.c  2-wait_command.c  5-com_vs_path.c      excersice_before_proyect  scripts
-$ /usr/bin/ls
 $
+$ /usr/bin/ls
 0-main.c         100-calloc.c      3-extract_command.c  6-run_command.c           main.h
 01-sighandler.c  101-strlen.c      4-command_path.c     README.md                 man_simple_shell
 1-search_path.c  2-wait_command.c  5-com_vs_path.c      excersice_before_proyect  scripts
@@ -42,6 +42,7 @@ $| echo "ls" | ./hsh
 0-main.c         100-calloc.c      3-extract_command.c  6-run_command.c           main.h
 01-sighandler.c  101-strlen.c      4-command_path.c     README.md                 man_simple_shell
 1-search_path.c  2-wait_command.c  5-com_vs_path.c      excersice_before_proyect  scripts
+$
 $| echo "/usr/bin/ls" | ./hsh
 0-main.c         100-calloc.c      3-extract_command.c  6-run_command.c           main.h
 01-sighandler.c  101-strlen.c      4-command_path.c     README.md                 man_simple_shell
@@ -62,6 +63,8 @@ $| ./hsh
 $ ^d
 $| 
 ```
+This simple shell is made to work with most of the normal command non-built-in like ls with their flags, echo, pwd, etc. 
+
 -------
 ## Authors: ✨✨
 - Leonardo Cumaco -> https://github.com/Coderlancce
