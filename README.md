@@ -1,6 +1,6 @@
-# simple_shell
+# simple_shell 🖥️
 
-## Description 
+## Description 📁
 A simple shell is a program that interprets human commands and makes **system calls** to execute all desired actions. In general, connects the user with Kernel or System, it is the direct relation with the same.
 
 ## Flowchart 
@@ -48,4 +48,24 @@ $| echo "/usr/bin/ls" | ./hsh
 1-search_path.c  2-wait_command.c  5-com_vs_path.c      excersice_before_proyect  scripts
 $|  
 ```
-
+**to exit program in interactive mode**
+theres 2 ways to do it
+first: with command `exit`
+```sh
+$| ./hsh
+$ exit
+$|
+```
+second: with command `ctrl + d`
+```sh
+$| ./hsh
+$ ^d
+$| 
+```
+-------
+Authors:
+- Leonardo Cumaco -> https://github.com/Coderlancce
+- Jesus Junco -> https://github.com/bcondict
+-------
+All the project was made for Holberton School academy.
+[![holberton-imagen.png](https://i.postimg.cc/XNPcj3FQ/holberton-imagen.png)](https://postimg.cc/NL1rD3dH)  
