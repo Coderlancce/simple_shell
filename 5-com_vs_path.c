@@ -2,10 +2,10 @@
 
 /**
  * com_vs_path - add command to the path
- * @buffer_fold: buffer of divided path
+ * @buffer_folder: buffer of divided path
  * @command_buffer: buffer to save the user command
  *
- * Return: 
+ * Return: path with command
  */
 
 char *com_vs_path(char *buffer_folder, char *command_buffer)
@@ -13,7 +13,7 @@ char *com_vs_path(char *buffer_folder, char *command_buffer)
 	char *buffer_complete_path = NULL;
 	int i = 0, j = 0;
 
-	buffer_complete_path = malloc(sizeof(char) * 1024);
+	buffer_complete_path = _calloc(sizeof(char), 1024);
 	if (buffer_complete_path == NULL)
 	{
 		free(buffer_folder);

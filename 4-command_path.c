@@ -14,7 +14,7 @@ int command_path(char *command_ex, char *command_buffer, char *check_path)
 	char *buffer_folder = NULL,  *check_equals = NULL;
 	struct stat sb;
 
-	buffer_folder = malloc(sizeof(char) * 1024);
+	buffer_folder = _calloc(sizeof(char), 1024);
 	if (buffer_folder == NULL)
 	{
 		free(command_ex);
@@ -22,11 +22,10 @@ int command_path(char *command_ex, char *command_buffer, char *check_path)
 		return (EOF);
 	}
 
-	if(stat(command_ex, &sb) == 0)
+	if (stat(command_ex, &sb) == 0)
 	{
 		run_command(command_ex, command_buffer);
 	}
-
 	else
 	{
 		buffer_folder = strtok(check_path, ":");
@@ -46,10 +45,8 @@ int command_path(char *command_ex, char *command_buffer, char *check_path)
 			}
 			buffer_folder = strtok(NULL, ":");
 		}
-
 		if (stat(check_equals, &sb) != 0)
 			printf("Command '%s' not found\n", command_buffer);
-
 		free(check_equals);
 	}
 	free(buffer_folder);

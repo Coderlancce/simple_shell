@@ -11,7 +11,7 @@ char *search_path(void)
 	int i = 0, j = 0;
 	char *buffer_path = NULL;
 
-	buffer_path = malloc(sizeof(char) * 1024);
+	buffer_path = _calloc(sizeof(char), 1024);
 	if (buffer_path == NULL)
 		return (NULL);
 

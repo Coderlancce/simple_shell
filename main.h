@@ -11,8 +11,16 @@
 #include <fcntl.h>
 #include <signal.h>
 
+#define ISATTYPROMPT(PROMPT, LEN) \
+do {\
+	if (isatty(0) == 1)\
+		write(STDOUT_FILENO, (PROMPT), (LEN));\
+} while (0)
+
 extern char **environ;
 
+int _strlen(char *s);
+void *_calloc(unsigned int nmemb, unsigned int size);
 char *find_username(void);
 void sighandler(int signum);
 char *search_path(void);
