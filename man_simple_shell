@@ -1,0 +1,91 @@
+shell(1) - manual page
+
+NAME
+
+	hsh — shell, the standard command language interpreter
+
+SYNOPSIS
+
+	./hsh
+	[\| options \|]
+
+DESCRIPTION
+
+	Hsh utility is a command language interpreter that shall
+	execute commands read from a command line string, the
+	program wait the command and conect this with the executable
+	file.
+
+ENVIRONMENT VARIABLES
+
+	The following envronment variables shall affect the execution of
+	hsh:
+
+	ENV	This variable is invoked to start program, and are renvoked
+		if you type a next line of arguments
+
+EXIT STATUS
+
+	The following exit values shall be returned:
+
+	0   	The script to be executed correctly and the output its the
+		expected.
+
+	EOF	If something procces dont create some procces necesary.
+
+	Ctrl D	Forced exit status EOF.
+
+EXAMPLES
+
+	1. Execute a shell command for see path at current directory:
+
+	   	pwd
+		/root/shell/simple_shell
+
+	2. Execute a shell for list all files in large list:
+
+	   	ls -la
+		total 40
+		drwxr-xr-x 1 root root 4096 Apr 21 18:54  .
+		drwxr-xr-x 1 root root 4096 Apr 21 18:36  ..
+		drwxr-xr-x 1 root root 4096 Apr 21 18:36  .git
+		-rw-r--r-- 1 root root  299 Apr 21 18:36  0-main.c
+		-rw-r--r-- 1 root root  187 Apr 21 18:36  01-sighandler.c
+		-rw-r--r-- 1 root root  459 Apr 21 18:36  1-search_path.c
+		-rw-r--r-- 1 root root  825 Apr 21 18:36  2-wait_command.c
+		-rw-r--r-- 1 root root  481 Apr 21 18:36  3-extract_command.c
+		-rw-r--r-- 1 root root 1142 Apr 21 18:36  4-command_path.c
+		-rw-r--r-- 1 root root  771 Apr 21 18:36  5-com_vs_path.c
+		-rw-r--r-- 1 root root 1028 Apr 21 18:36  6-run_command.c
+		-rw-r--r-- 1 root root   20 Apr 21 18:36  README.md
+		drwxr-xr-x 1 root root 4096 Apr 21 18:36  excersice_before_proyect
+		-rw-r--r-- 1 root root 1783 Apr 21 18:36  gmon.out
+		-rw-r--r-- 1 root root  757 Apr 21 18:36  main.h
+		-rw-r--r-- 1 root root 3874 Apr 21 18:49  man_simple_shell
+		drwxr-xr-x 1 root root 4096 Apr 21 18:36  scripts
+
+RATIONALE
+
+	The hsh utility is didactic and the build its for learning procces.
+
+SEE ALSO
+
+	Section 2.9.1.1, Command Search and Execution, Chapter 2, Shell
+        Command Language, cd(1p), echo(1p), exit(1p), fc(1p), pwd(1p),
+	invalid, set(1p), stty(1p), test(1p), trap(1p), umask(1p), vi(1p)
+
+        The Base Definitions volume of POSIX.1‐2017, Chapter 8,
+        Environment Variables, Section 12.2, Utility Syntax Guidelines
+
+        The System Interfaces volume of POSIX.1‐2017, dup(3p), exec(1p),
+        exit(3p), fork(3p), open(3p), pipe(3p), signal(3p), system(3p),
+	ulimit(3p), umask(3p), wait(3p)
+
+ AUTHORS
+
+	Leonardo Cumaco - Coderlancce
+	Jesus Junco - Bcondit
+
+DATE CREATION
+
+     21/04/2022 - 7:16 PM
