@@ -12,13 +12,13 @@ int cheker_exit(char *command_buffer)
 	char command_exit[4] = "exit";
 	int i = 0;
 
-	if(command_buffer[i] == command_exit[i])
+	if (command_buffer[i] == command_exit[i])
 	{
-		for(; command_buffer[i] == command_exit[i]; i++)
+		for (; command_buffer[i] == command_exit[i]; i++)
 		{
-			if(command_exit[i] == 't')
+			if (command_exit[i] == 't')
 			return (EOF);
 		}
 	}
-	return(0);
+	return (0);
 }
